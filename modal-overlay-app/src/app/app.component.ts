@@ -10,6 +10,7 @@ import { OverlayService } from './modal-overlay/moday-overlay.service';
 export class AppComponent {
   title = 'modal-overlay-app';
   msg: string;
+  arr: [];
   msgComponent = MsgComponent;
   constructor(public overlayService: OverlayService) {}
   openModalOverlay(content: TemplateRef<any> | ComponentType<any> | string) {
@@ -21,6 +22,7 @@ export class AppComponent {
       if (typeof content === 'string') {
       } else if (content === this.msgComponent) {
         console.log(res);
+        this.arr = res.data;
       }
     });
   }

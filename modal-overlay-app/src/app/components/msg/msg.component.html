@@ -1,2 +1,6 @@
 <p>{{msg}}</p>
-<button (click)="closeModalOverlay()">Close</button>
+<hr>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let x of arr" cdkDrag>{{x}}</div>
+</div>
+<button (click)="closeModalOverlay()" style="margin:10px">Close</button>

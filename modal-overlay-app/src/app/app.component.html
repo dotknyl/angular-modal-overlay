@@ -1,4 +1,7 @@
 <div style="text-align: center;">
   <input type="text" name="msg" [(ngModel)]="msg">
   <button (click)="openModalOverlay(msgComponent)">Show modal</button>
+  <div style="margin-top: 50px;">
+    <span style="padding: 10px;" *ngFor="let x of arr">{{x}}</span>
+  </div>
 </div>

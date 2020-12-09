@@ -10,12 +10,13 @@ import { OverlayService } from './modal-overlay/moday-overlay.service';
 export class AppComponent {
   title = 'modal-overlay-app';
   msg: string;
-  arr: [];
+  arr= ['A', 'B', 'C', 'D', 'E', 'F'];
   msgComponent = MsgComponent;
   constructor(public overlayService: OverlayService) {}
   openModalOverlay(content: TemplateRef<any> | ComponentType<any> | string) {
     const ref = this.overlayService.open(content, {
       msg: this.msg,
+      arr: this.arr,
     });
 
     ref.afterClosed$.subscribe((res) => {

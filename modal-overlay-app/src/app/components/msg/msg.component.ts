@@ -8,9 +8,10 @@ import { ModalOverlayRef } from 'src/app/modal-overlay/modal-overlay-ref';
 })
 export class MsgComponent implements OnInit {
   msg: string;
-  arr = ['A', 'B', 'C', 'D', 'E', 'F'];
+  arr;
   constructor(@Inject(ModalOverlayRef) private componentData: any) {
     this.msg = componentData.data.msg;
+    this.arr = componentData.data.arr;
   }
 
   ngOnInit(): void {}
